@@ -1,0 +1,20 @@
+language: go
+sudo: true
+go:
+  - 1.9
+before_install:
+  - sudo apt-get update -y
+  - sudo apt install curl -y
+  - curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+install:
+  - dep ensure
+  - make test
+script:
+  - go build -ldflags="-X main.Version=${VERSION}" -o bin/speedtest ./cmd/speedtest
+  - ./bin/speedtest -p
+notifications:
+  email:
+    recipients:
+      - zpeters@gmail.com
+    on_failure: always
+    on_success: always
