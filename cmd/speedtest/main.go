@@ -16,9 +16,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/zpeters/speedtest/tree/master/internal/print"
-	"github.com/zpeters/speedtest/tree/master/internal/speedtests"
-	"github.com/zpeters/speedtest/tree/master/internal/sthttp"
+	"github.com/mspinnewyn/speedtest/tree/master/internal/print"
+	"github.com/mspinnewyn/speedtest/tree/master/internal/speedtests"
+	"github.com/mspinnewyn/speedtest/tree/master/internal/sthttp"
 
 	"github.com/dchest/uniuri"
 	"github.com/google/go-github/github"
@@ -192,8 +192,8 @@ func init() {
 	viper.SetDefault("reportchar", "|")
 	viper.SetDefault("algotype", "max")
 	viper.SetDefault("httptimeout", 15)
-	viper.SetDefault("dlsizes", []int{350, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000})
-	viper.SetDefault("ulsizes", []int{int(0.25 * 1024 * 1024), int(0.5 * 1024 * 1024), int(1.0 * 1024 * 1024), int(1.5 * 1024 * 1024), int(2.0 * 1024 * 1024)})
+	viper.SetDefault("dlsizes", []int{350, 500, 750, 1000, 1500, 2000})
+	viper.SetDefault("ulsizes", []int{int(0.25 * 1024 * 1024), int(0.5 * 1024 * 1024), int(1.0 * 1024 * 1024), int(1.5 * 1024 * 1024)})
 	viper.SetDefault("speedtestconfigurl", "http://c.speedtest.net/speedtest-config.php?x="+uniuri.New())
 	viper.SetDefault("speedtestserversurl", "http://c.speedtest.net/speedtest-servers-static.php?x="+uniuri.New())
 	viper.SetDefault("useragent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.21 Safari/537.36")
