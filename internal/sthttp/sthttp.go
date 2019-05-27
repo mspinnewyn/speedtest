@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/zpeters/speedtest/internal/coords"
-	"github.com/zpeters/speedtest/internal/misc"
+	"github.com/mspinnewyn/speedtest/internal/coords"
+	"github.com/mspinnewyn/speedtest/internal/misc"
 )
 
 // TheClient is our users information
