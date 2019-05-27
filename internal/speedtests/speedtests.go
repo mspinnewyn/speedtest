@@ -5,9 +5,9 @@ import (
 	"log"
 	"strings"
 
-	"github.com/zpeters/speedtest/internal/misc"
-	"github.com/zpeters/speedtest/internal/print"
-	"github.com/zpeters/speedtest/internal/sthttp"
+	"github.com/mspinnewyn/speedtest/internal/misc"
+	"github.com/mspinnewyn/speedtest/internal/print"
+	"github.com/mspinnewyn/speedtest/internal/sthttp"
 )
 
 var (
