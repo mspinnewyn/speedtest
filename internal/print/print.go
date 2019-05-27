@@ -6,7 +6,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/zpeters/speedtest/internal/sthttp"
+	"github.com/mspinnewyn/speedtest/internal/sthttp"
 )
 
 // Server prints the results in "human" format
