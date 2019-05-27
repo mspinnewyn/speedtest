@@ -42,7 +42,7 @@ func runTest(c *cli.Context, stClient *sthttp.Client, tester *speedtests.Tester)
 
 	// if we are *not* running a report then say hello to everyone
 	if !tester.Report {
-		fmt.Printf("github.com/zpeters/speedtest -- unofficial cli for speedtest.net\n")
+		fmt.Printf("github.com/mspinnewyn/speedtest -- unofficial cli for speedtest.net\n")
 	}
 
 	// if we are in debug mode print outa an environment report
@@ -209,8 +209,8 @@ func main() {
 	// setting up cli settings
 	app := cli.NewApp()
 	app.Name = "speedtest"
-	app.Usage = "Unofficial command line interface to speedtest.net (https://github.com/zpeters/speedtest)"
-	app.Author = "Zach Peters - zpeters@gmail.com - github.com/zpeters"
+	app.Usage = "Unofficial command line interface to speedtest.net (https://github.com/mspinnewyn/speedtest)"
+	app.Author = "Zach Peters - mspinnewyn@gmail.com - github.com/mspinnewyn"
 	app.Version = Version
 
 	// setup cli flags
@@ -299,13 +299,13 @@ func main() {
 			// Check if there is an update
 			client := github.NewClient(nil)
 			ctx := context.Background()
-			latestRelease, _, err := client.Repositories.GetLatestRelease(ctx, "zpeters", "speedtest")
+			latestRelease, _, err := client.Repositories.GetLatestRelease(ctx, "mspinnewyn", "speedtest")
 			if err != nil {
 				log.Fatalf("github call: %s", err)
 			}
 			githubTag := *latestRelease.TagName
 			if Version != githubTag {
-				fmt.Printf("New version %s available at https://github.com/zpeters/speedtest/releases\n", githubTag)
+				fmt.Printf("New version %s available at https://github.com/mspinnewyn/speedtest/releases\n", githubTag)
 			} else {
 				fmt.Printf("You are up to date\n")
 			}
