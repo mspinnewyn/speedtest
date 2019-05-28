@@ -12,9 +12,9 @@ import (
 
 var (
 	// DefaultDLSizes defines the default download sizes
-	DefaultDLSizes = []int{350, 500, 750, 1000, 1500, 2000}
+	DefaultDLSizes = []int{350, 500, 750, 1000, 1500, 2000, 2500, 3000}
 	// DefaultULSizes defines the default upload sizes
-	DefaultULSizes = []int{int(0.25 * 1024 * 1024), int(0.5 * 1024 * 1024), int(1.0 * 1024 * 1024), int(1.5 * 1024 * 1024)}
+	DefaultULSizes = []int{int(0.25 * 1024 * 1024), int(0.5 * 1024 * 1024), int(1.0 * 1024 * 1024), int(1.5 * 1024 * 1024), int(2.0 * 1024 * 1024)}
 )
 
 // Tester defines a Speedtester client tester
